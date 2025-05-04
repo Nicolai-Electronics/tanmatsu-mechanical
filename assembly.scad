@@ -16,7 +16,7 @@ cable_hole_offset = 3;
 
 hook_height = wall_height;
 
-sma = true; // option, no hole for internal antenna
+sma = false; // option, no hole for internal antenna
 show_speaker_adapter = false; // 3D printed separately
 
 battery_holder_pos = [120-46 - battery_depth,51.8,1.65-0.2];
@@ -44,8 +44,6 @@ module battery_holder() {
         translate([wall_thickness, wall_thickness, base_height-0.001]) cube([battery_width, battery_depth, battery_height + wall_height + 0.002], false);
         translate([0, wall_thickness + battery_depth - cable_hole_width, base_height + cable_hole_offset]) cube([wall_thickness,cable_hole_width,battery_height + wall_height], false);
     }
-
-    translate([0,0,battery_height]) cube([battery_width + wall_thickness*2, 5, hook_height], false);
 }
 
 color([0,1,0,0.5]) translate(battery_holder_pos) rotate([0,0,270]) battery_holder();
