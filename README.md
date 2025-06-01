@@ -11,8 +11,6 @@ All parts are integrated in the FreeCAD design file. Also a separate
 STEP file each part, so people can print these directly from this
 repository. 
 
-Currently the Speaker adapter is still based on OpenSCAD design. 
-
 # Getting Tanmatsu STEP files.
 
 Clone the repositories for both the Tanmatsu mainboard and a frontpanel. 
