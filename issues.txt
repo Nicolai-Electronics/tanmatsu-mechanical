@@ -1,10 +1,11 @@
-[ ] Randen rondom de moeren.
-[ ] Wanddikte bij connectoren.
-[ ] Audio connector bij spacer
-[ ] Zijkant beeldscherm 
-[ ] Afmetingen speaker compartiment
-[ ] Ergonomische grip 
-[ ] Diepte schroefgaten.
+[V] Randen rondom de moeren. - Upper ones to 4.0 mm, lower to 3.0 mm. 
+[V] Wanddikte bij connectoren. - Wanddikte naar 2.0 mm en chamfer 1.5mm aangebracht.
+[V] Audio connector marges te klein - Van radius 2.8 mm naar 3.0
+[V] Audio connector bij spacer te fragiel.
+[V] Zijkant beeldscherm - Breedte is nu ook 96.0 mm. 
+[V] Afmetingen speaker compartiment - Afstand tot zijwand checken
+[T] Ergonomische grip - Afstemmen met Solidworks design.
+[V] Diepte schroefgaten.
 [ ] 
 [ ] 
 [ ] 
