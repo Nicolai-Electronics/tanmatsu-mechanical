@@ -1,2 +1,4 @@
 **/*.FCBak
 **/*.3mf
+**/dependency.*
+
