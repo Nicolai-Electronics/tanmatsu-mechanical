@@ -9,7 +9,15 @@ These consist of the following:
 
 All parts are integrated in the FreeCAD design file. Also a separate
 STEP file each part, so people can print these directly from this
-repository. 
+repository.
+
+# Which revision do I need?
+
+You can find out your mainboard revision by going to `Settings > Device information` in the launcher firmware.
+
+If you have board revision 1 or 2 you need the "for revision 2" files. If you have a newer board revision you need the "for revision 3" files.
+
+The breaking change in case design is due to us having to move the audio jack down by two millimeters and outwards by two millimeters to solve a manufacturing problem.
 
 # Getting Tanmatsu STEP files.
 
@@ -31,7 +39,9 @@ Clone the repositories for both the Tanmatsu mainboard and a frontpanel.
 # License
 
 Copyright 2024-2025 Nicolai Electronics
+
 Copyright 2024-2025 Ytec Engineering
+
 Copyright 2025 Jelle Haandrikman
 
 This work is licensed under the CERN-OHL-P license. Full license text is
