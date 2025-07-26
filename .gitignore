@@ -1,4 +1,5 @@
 **/*.FCBak
 **/*.3mf
 **/dependency.*
+/release
 
