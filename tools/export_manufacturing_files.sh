@@ -4,16 +4,17 @@
 #
 # This script will convert the exported AMF and STEP files to the correct names for a release.
 #
-# TODO: Export the files directly from FreeCAD to the desired files.
+# TODO: Export the AMF files directly from FreeCAD to the desired files.
 
-mv Tanmatsu_3D-printed-case.amf ./release/case.amf
-mv Tanmatsu_3D-printed-case.step ./release/case.step
-mv Tanmatsu_3D-printed-field_test_case.amf ./release/case-for-mainboard-revision1-and-2.amf
-mv Tanmatsu_3D-printed-field_test_case.step ./release/case-for-mainboard-revision1-and-2.step
-mv Tanmatsu_3D-printed-field_test_spacer.amf ./release/spacer-for-mainboard-revision1-and-2.amf
-mv Tanmatsu_3D-printed-field_test_spacer.step ./release/spacer-for-mainboard-revision1-and-2.step
-mv Tanmatsu_3D-printed-spacer.amf ./release/spacer.amf
-mv Tanmatsu_3D-printed-spacer.step ./release/spacer.step
-mv Tanmatsu_3D-printed-speaker_adapter.amf ./release/speaker_adapter.amf
-mv Tanmatsu_3D-printed-speaker_adapter.step ./release/speaker_adapter.step
+if flatpak search info org.freecad.FreeCAD &> /dev/null ; then 
+    flatpak run org.freecad.FreeCAD --console tools/freecad_export.py
+else
+    echo "FreeCAD is not installed as Flatpak."
+    exit 0
+fi
+
+mv ./release/field_test_case.amf ./release/case-for-mainboard-revision1-and-2.amf
+mv ./release/field_test_case.step ./release/case-for-mainboard-revision1-and-2.step
+mv ./release/field_test_spacer.amf ./release/spacer-for-mainboard-revision1-and-2.amf
+mv ./release/field_test_spacer.step ./release/spacer-for-mainboard-revision1-and-2.step
 

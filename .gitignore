@@ -3,4 +3,7 @@
 **/*.amf
 **/dependency.*
 /release
+/tools/__pycache__
+/tools/*.step
+
 
