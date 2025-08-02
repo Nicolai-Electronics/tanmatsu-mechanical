@@ -1,5 +1,7 @@
 **/*.FCBak
 **/*.3mf
+**/*.amf
 **/dependency.*
 /release
-
+/tools/__pycache__
+/tools/*.step
