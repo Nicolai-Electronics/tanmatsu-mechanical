@@ -6,6 +6,10 @@
 #
 # TODO: Export the AMF files directly from FreeCAD to the desired files.
 
+if [ ! -d "./release" ]; then
+  mkdir "./release"
+fi
+
 if flatpak search info org.freecad.FreeCAD &> /dev/null ; then 
     flatpak run org.freecad.FreeCAD --console tools/freecad_export.py
 else

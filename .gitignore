@@ -2,6 +2,7 @@
 **/*.3mf
 **/*.amf
 **/dependency.*
-/release
-/tools/__pycache__
-/tools/*.step
+release/*
+!release/.gitkeep
+tools/__pycache__
+tools/*.step
