@@ -7,7 +7,7 @@ jobs:
     steps:
       - run: sudo apt-get install flatpak
       - run: sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-      - run: sudo flatpak install flathub org.freecad.FreeCAD
+      - run: sudo flatpak install flathub org.freecad.FreeCAD -y
       - name: Check out repository
         uses: actions/checkout@v4
       - run: ./tools/export_manufacturing_files.sh
