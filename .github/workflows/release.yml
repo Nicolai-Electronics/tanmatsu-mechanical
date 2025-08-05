@@ -23,7 +23,6 @@ jobs:
         run: ls
       - name: Add artifacts to release
         run: |
-          gh release upload ${{ github.event.workflow_run.head_branch }} *.amf
-          gh release upload ${{ github.event.workflow_run.head_branch }} *.step
+          gh release upload ${{ github.event.workflow_run.head_branch }} files/*
         env:
           GH_TOKEN: ${{ github.token }}
