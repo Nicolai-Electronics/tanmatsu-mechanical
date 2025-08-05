@@ -1,0 +1,29 @@
+name: Add release artifacts
+run-name: Add release artifacts
+
+on:
+  workflow_run:
+    branches: ['release-*']
+    workflows: [Build]
+    types:
+      - completed
+
+jobs:
+  on-success:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install zip
+        run: sudo apt-get install zip
+      - name: Download all artifacts
+        uses: actions/download-artifact@v4
+        with:
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ github.token }}
+      - name: Display artifact files
+        run: ls
+      - name: Add artifacts to release
+        run: |
+          gh release upload ${{ github.event.workflow_run.head_branch }} *.amf
+          gh release upload ${{ github.event.workflow_run.head_branch }} *.step
+        env:
+          GH_TOKEN: ${{ github.token }}
