@@ -12,6 +12,8 @@ jobs:
   on-success:
     runs-on: ubuntu-latest
     steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
       - name: Install zip
         run: sudo apt-get install zip
       - name: Download all artifacts
