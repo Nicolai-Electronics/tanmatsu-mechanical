@@ -4,7 +4,7 @@ import FreeCADGui as Gui
 
 Gui.setupWithoutGUI()
 
-document = FreeCAD.openDocument('Tanmatsu_3D-printed.FCStd')
+document = FreeCAD.openDocument('tanmatsu.FCStd')
 
 # If you want a smaller file to test on use this one instead. 
 #document = FreeCAD.openDocument('test_freecad_file.FCStd')
